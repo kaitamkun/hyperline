@@ -61,7 +61,11 @@ export function decorateHyper(Hyper, { React, notify }) {
     }
 
     render() {
-      return <Hyper {...this.props} customChildren={(
+      let children = this['props']['customChildren'] || []
+      if (!(children instanceof Array)) {
+        children = [ children ]
+      }
+      return <Hyper {...this.props} customChildren={children.concat(
         <HyperLine
           fontFamily={this.props.fontFamily}
           colors={this.colors}

@@ -8,6 +8,7 @@ export const hyperlineFactory = (React) => {
       position: 'absolute',
       overflow: 'hidden',
       bottom: 0,
+      marginLeft: '-1px',
       width: '100%',
       height: '18px',
       font: 'bold 12px Monospace',
