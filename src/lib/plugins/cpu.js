@@ -133,7 +133,7 @@ export function componentFactory( React, colors ) {
 
       return (
         <PluginWrapper color={fillColor}>
-          <PluginIcon fillColor={fillColor} /> {avg}%
+          <PluginIcon fillColor={fillColor} /> {(avg < 10? '\xa0' : '') + avg}%
         </PluginWrapper>
       )
     }
